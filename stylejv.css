@@ -1,26 +1,128 @@
 *{
-    background-color: azure;
-
-}
-
-h1 {
-    text-align: center;
-    font-size: 80px;
-    color: grey;
-
-}
-
-.formulario {
-    display: block;
-    text-align: center;
-    font-size: 40px;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea{
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container {
+display: grid;
+grid-template-columns: 1fr 4fr;
+background-color: #DB7093;
 
 }
 
-.pic1{
-display: block;
-text-align: center;
+
+aside {
+    padding: 2rem;
+    color: white;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.logo {
+    font-weight: 400;
+    font-size: 1.3rem ;
+
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.botoncategoria{
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.texto-footer{
+    color: white;
+    font-size: .85rem;
+}
+
+main {
+    background-color: white;
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 3rem;
+    display: grid;
+    
+}
+
+.titulo-principal {
+    color: #DB7093;
+
+}
+
+.contenedor-productos{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 4fr);
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.producto-imagen{
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+.producto-detalles{
+    background-color: #DB7093;
+    color: white;
+    padding: .5rem;
+    border-radius: 1rem;
+    margin-top: -2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+
+}
+
+.producto-titulo{
+    font-size: 1rem;
+}
+
+.producto-agregar{
+border:0;
+background-color: white;
+color: #DB7093;
+padding: .5rem;
+text-transform: uppercase ;
+border-radius: 2rem;
+cursor: pointer;
+
+
+}
+
+.producto-agregar:hover {
+    background-color: #DB7093;
+    color: white;
 
 }
