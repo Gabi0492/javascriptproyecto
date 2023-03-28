@@ -1,70 +1,118 @@
-//Array//
 
+//** Array */
 const productos = [
-    {nombre:"Shoes", precio: 1000},
-    {nombre:"Tshirt", precio: 1000},
-    {nombre:"Pants", precio: 1000},
+
+    //**Dress */
+ {
+    id:"dress-01",
+    titulo:"Dress",
+    imagen:"../javascriptproject/images/dress/dress2.jpeg",
+    categoria:{
+        nombre: "Dress",
+        id: "dress",
+    },
+    precio: 1000
+ },
+ {
+    id:"dress-02",
+    titulo:"Dress",
+    imagen:"../javascriptproject/images/dress/dress4.jpg",
+    categoria:{
+        nombre: "Dress",
+        id: "dress",
+    },
+    precio: 1000
+ },
+
+ //**Tshirt */
+ 
+ {
+    id:"tshirt-01",
+    titulo:"Tshirt",
+    imagen:"../javascriptproject/images/t-shirt/tshirt1.jpg" ,
+    categoria:{
+        nombre: "Tshirt",
+        id: "tshirt",
+    },
+    precio: 1000
+ },  
+
+ {
+    id:"tshirt-02",
+    titulo:"Tshirt",
+    imagen:"../javascriptproject/images/t-shirt/tshirt4.jpeg" ,
+    categoria:{
+        nombre: "Tshirt",
+        id: "tshirt",
+    },
+    precio: 1000
+ },  
+
+ //**Pants */
+
+ {
+    id:"pants-01",
+    titulo:"Pants",
+    imagen:"../javascriptproject/images/pants/pants3.jpg" ,
+    categoria:{
+        nombre: "Pants",
+        id: "pants",
+    },
+    precio: 1000
+ },
+
+ {
+    id:"pants-02",
+    titulo:"Pants",
+    imagen:"../javascriptproject/images/pants/pants4.jpg" ,
+    categoria:{
+        nombre: "Pants",
+        id: "pants",
+    },
+    precio: 1000
+ },
+]
+
+
+const contenedorProductos = document.querySelector("#contenedor-productos");
+const botonesCategorias = document.querySelectorAll(".boton-categoria");
 
 
 
-];
-//Inicio de las variables //
+function cargarProductos(productosElegidos){
 
-let carrito = []
-let seleccion = prompt ("Hi do you want to buys something? Please select yes or no")
+    contenedorProductos.innerHTML = "";
 
-while(seleccion != "yes" && seleccion != "no"){
-    alert ("Please select yes or no")
-    seleccion = prompt ("Do you want to buy something yes or no")
+    productosElegidos.forEach(producto => {
+        const div = document.createElement("div");
+        div.classList.add("producto");
+        div.innerHTML= `
+        <img class="producto-imagen" src="${producto.imagen}" alt="dress1">
+        <div class="producto-detalles">
+            <h3 class="producto-titulo">"${producto.titulo}"</h3>
+            <p class="producto-precio">"${producto.precio}"</p>
+            <button class="producto-agregar" id ="${producto.id}">Select</button>
+        </div>
+        `;
+        contenedorProductos.append(div);
+        
+    });
 }
 
-if (seleccion == "yes"){
-    alert ("Attache the list of the products")
-    let todosLosProductos = productos.map(
-        (producto) => producto.nombre + "" + producto.precio + "$"
-    );
-    alert (todosLosProductos.join(" - "))
-}else if (seleccion == "no"){
-    alert ("Thanks for coming")
-}
+cargarProductos(productos);
 
-// Inicio del segundo bucle//
-
-while (seleccion == "yes"){
-let producto = prompt ("Do you want to add something to the cart")
-let precio = 0
-
-if (producto == "Shoes" || producto == "Tshirt" || producto == "Pants"){
-    switch (producto){
-        case "Shoes":
-        precio = 1000;
-        break;
-        case "Tshirt":
-        precio = 1000;
-        break;
-        case "Pants":
-        precio = 1000;
-        break;
-    
-    }
-    let unidades = parseInt (prompt("How many pieces do you want to add"))
-    carrito.push ({producto, unidades, precio})
-    console.log (carrito)
-    }else{
-        alert ("We dont have that product")
-
-}
-seleccion = prompt ("Do you want to continue buying")
-
-//Ultimo bucle//
-while (seleccion === "no"){
-    alert ("Thanks for your time")
-    carrito.forEach((carritoFinal) =>{
-        console.log(`producto: ${carritoFinal.producto}, unidades: ${carritoFinal.unidades}, final amount ${carritoFinal.unidades * carritoFinal.precio}`)
+botonesCategorias.forEach (boton => {
+    boton.addEventListener("click", (e) =>{
+        botonesCategorias.forEach(boton => boton.classList.remove("active"));
+        e.currentTarget.classList.add("active");
+        if(e.currentTarget.id != "todos"){
+            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+            cargarProductos(productosBoton);
+        } else{
+            cargarProductos(productos);
+        }
     })
-    break;
-}
-}
+    localStorage.setItem("botones-categorias", JSON.stringify(botonesCategorias))
+})
 
-const total = carrito.reduce ((acc, el) => acc + el.precio * el.unidades, 0)
-console.log (`Total of your buys is: ${total}`)
+console.log (productos)

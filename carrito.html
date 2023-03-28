@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./stylejv.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <aside>
+            <header>
+                <h1 class="logo">StyleShop</h1>
+            </header>
+            <nav>
+                <ul class="menu">
+                <li><a class="boton-menu boton-volver" href="../javascriptproject/index.html"><i class= "bi-arrow-left-circle"></i>Back to the store</a></li>
+                <li><a class="boton-menu boton-carrito active" href="../javascriptproject/carrito.html"><i class="bi bi-cart-fill"></i>Shop</a></li>
+
+                </ul>
+            </nav>
+            <footer>
+                <p class="texto-footer">© 2023 StyleShop</p>
+            </footer>
+        </aside>
+        <main>
+            <h2 class="titulo-principal">Cart</h2>
+            <div class="contenedor-carrito">
+                <p class="carrito-vacio">Your cart is empty <i class="bi bi-emoji-frown"></i> </p>
+                <div class="carrito-productos disabled">
+                    <div class="carrito-producto">
+                        <img class="carrito-producto-imagen" src="../javascriptproject/images/dress/dress2.jpeg" alt="dress 3">
+                        <div class="carrito-producto-titulo">
+                            <small>Titulo</small>
+                            <h3>Dress 1</h3>
+                        </div>
+                        <div class="carrito-producto-cantidad">
+                            <small>Cantidad</small>
+                            <p>1</p>
+                        </div>
+                            <div class="carrito-producto-precio">
+                                <small>Precio</small>
+                                <p>1000$</p>
+                            </div>
+                            <div class="carrito-producto-subtotal">
+                                <small>Subtotal</small>
+                                <p>1000$</p>
+                            </div>
+                            <button class="carrito-producto-eliminar"><i class="bi bi-trash3-fill"></i></button>
+                    </div>
+                
+
+                            <div class="carrito-producto">
+                                <img class="carrito-producto-imagen" src="../javascriptproject/images/pants/pants3.jpg" alt="pants 3">
+                                <div class="carrito-producto-titulo">
+                                    <small>Titulo</small>
+                                    <h3>Pants 1</h3>
+                                </div>
+                                <div class="carrito-producto-cantidad">
+                                    <small>Cantidad</small>
+                                    <p>2</p>
+                                </div>
+                                    <div class="carrito-producto-precio">
+                                        <small>Precio</small>
+                                        <p>1000$</p>
+                                    </div>
+                                    <div class="carrito-producto-subtotal">
+                                        <small>Subtotal</small>
+                                        <p>1000$</p>
+                                    </div>
+                            <button class="carrito-producto-eliminar"><i class="bi bi-trash3-fill"></i></button>
+
+                    </div>
+                </div>
+                <div class="carrito-acciones disabled">
+                    <div class="carrito-acciones-izquierda">
+                        <button class="carrito-acciones-vaciar">Empty Cart</button>
+                    </div>
+       
+                    <div class="carrito-acciones-derecha">
+                        <div class="carrito-acciones-total">
+                            <p>Total</p>
+                            <p id="total">$3000</p>
+                        </div>
+                        
+                        <button class="carrito-acciones-comprar">Buy now</button>
+                    </div>
+            </div>
+            <p class="carrito-comprado disabled">Thanks for buy with us <i class="bi bi-emoji-smile"></i> </p>
+        </main>
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
