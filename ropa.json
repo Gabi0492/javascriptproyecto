@@ -1,0 +1,70 @@
+[
+
+ {
+    "id":"dress-01",
+    "titulo":"Dress",
+    "imagen":"../javascriptproject/images/dress/dress2.jpeg",
+    "categoria":{
+        "nombre": "Dress",
+        "id": "dress"
+    },
+    "precio": 1000
+ },
+ {
+    "id":"dress-02",
+    "titulo":"Dress",
+    "imagen":"../javascriptproject/images/dress/dress4.jpg",
+    "categoria":{
+        "nombre": "Dress",
+        "id": "dress"
+    },
+    "precio": 1000
+ },
+
+ 
+ {
+    "id":"tshirt-01",
+    "titulo":"Tshirt",
+    "imagen":"../javascriptproject/images/t-shirt/tshirt1.jpg" ,
+    "categoria":{
+        "nombre": "Tshirt",
+        "id": "tshirt"
+    },
+    "precio": 1000
+ },  
+
+ {
+    "id":"tshirt-02",
+    "titulo":"Tshirt",
+    "imagen":"../javascriptproject/images/t-shirt/tshirt4.jpeg" ,
+    "categoria":{
+        "nombre": "Tshirt",
+        "id": "tshirt"
+    },
+    "precio": 1000
+ },  
+
+
+ {
+    "id":"pants-01",
+    "titulo":"Pants",
+    "imagen":"../javascriptproject/images/pants/pants3.jpg" ,
+    "categoria":{
+        "nombre": "Pants",
+        "id": "pants"
+    },
+    "precio": 1000
+ },
+
+ {
+    "id":"pants-02",
+    "titulo":"Pants",
+    "imagen":"../javascriptproject/images/pants/pants4.jpg" ,
+    "categoria":{
+        "nombre": "Pants",
+        "id": "pants"
+    },
+    "precio": 1000
+ }
+
+]

@@ -29,8 +29,9 @@
         <main>
             <h2 class="titulo-principal">Cart</h2>
             <div class="contenedor-carrito">
-                <p class="carrito-vacio">Your cart is empty <i class="bi bi-emoji-frown"></i> </p>
-                <div class="carrito-productos disabled">
+                <p id="carrito-vacio" class="carrito-vacio">Your cart is empty <i class="bi bi-emoji-frown"></i> </p>
+
+                <div id="carrito-productos" class="carrito-productos">
                     <div class="carrito-producto">
                         <img class="carrito-producto-imagen" src="../javascriptproject/images/dress/dress2.jpeg" alt="dress 3">
                         <div class="carrito-producto-titulo">
@@ -75,7 +76,8 @@
 
                     </div>
                 </div>
-                <div class="carrito-acciones disabled">
+            </div>
+                <div id="carrito-acciones" class="carrito-acciones">
                     <div class="carrito-acciones-izquierda">
                         <button class="carrito-acciones-vaciar">Empty Cart</button>
                     </div>
@@ -89,10 +91,10 @@
                         <button class="carrito-acciones-comprar">Buy now</button>
                     </div>
             </div>
-            <p class="carrito-comprado disabled">Thanks for buy with us <i class="bi bi-emoji-smile"></i> </p>
+            <p id="carrito-comprado" class="carrito-comprado disabled">Thanks for buy with us <i class="bi bi-emoji-smile"></i> </p>
         </main>
     </div>
     
-    <script src="./index.js"></script>
+    <script src="../javascriptproject/carrito.js"></script>
 </body>
 </html>

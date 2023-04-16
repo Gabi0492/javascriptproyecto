@@ -21,7 +21,7 @@
                 <li><button id="dress" class="boton-menu boton-categoria"><i class="bi bi-star"></i>Dress</button></li>
                 <li><button id="tshirt" class="boton-menu boton-categoria"><i class="bi bi-star"></i>T-Shirt</button></li>
                 <li><button id="pants" class="boton-menu boton-categoria"><i class="bi bi-star"></i>Pants</button></li>
-                <li><a class="boton-menu boton-categoria active" href="./carrito.html"><i class="bi bi-cart-fill"></i>Shop<span class="shop">0</span></a></li>
+                <li><a class="boton-menu boton-categoria active" href="./carrito.html"><i class="bi bi-cart-fill"></i>Shop<span id="numerito" class="shop">0</span></a></li>
                 </ul>
             </nav>
             <footer>
@@ -29,13 +29,15 @@
             </footer>
         </aside>
         <main>
-            <h2 class="titulo-principal">All the products</h2>
+            <h2 class="titulo-principal" id="titulo-principal">All the products</h2>
             <div id= "contenedor-productos" class="contenedor-productos">
             </div>
         <!--Esto se rellena con JS-->
             
         </main>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./index.js"></script>
 </body>
 </html>
